@@ -1,0 +1,70 @@
+# Build artefacts
+bin/
+obj/
+[Bb]uild/
+[Bb]uilds/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# Mac/iOS
+*.dSYM/
+*.app/
+*.ipa
+*.xcuserstate
+*.xcuserdata/
+*.xcodeproj/
+*.xcworkspace/
+
+# Windows
+*.appx/
+*.appxupload/
+*.appxbundle/
+
+# Android
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+*.jar
+
+# Lokalna konfiguracja uruchamiania (tylko developer)
+**/launchSettings.json
+
+# Ignoruj lokalny plik z danymi
+chartdata.json
+
+# Systemowe
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+
+# Test results
+[Tt]est[Rr]esult*/
+*.coverage
+*.coveragexml
+*.trx
+
+# Resharper / Rider
+_ReSharper*/
+*.DotSettings.user
+
+# Dotnet tools
+.dotnet-tools.json

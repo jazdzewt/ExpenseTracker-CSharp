@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.AddItemPage"
+             Title="Add Expense">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Entry x:Name="NameEntry" Placeholder="Name" />
+            <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                <Entry x:Name="ValueEntry"
+               Grid.Column="0"
+               Placeholder="Value"
+               Keyboard="Numeric"
+               MaxLength="10" />
+
+                <Picker x:Name="PeriodPicker"
+                Grid.Column="1"
+                Title="Period"
+                WidthRequest="120">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>1 month</x:String>
+                            <x:String>3 months</x:String>
+                            <x:String>6 months</x:String>
+                            <x:String>1 year</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Grid>
+
+            <Picker x:Name="CategoryPicker"
+            Title="Select Category"
+            ItemDisplayBinding="{Binding Description}" />
+            <Editor x:Name="DescriptionEntry"
+            Placeholder="Description"
+            AutoSize="TextChanges"
+            HeightRequest="240" />
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                <Button Grid.Column="0" Text="Cancel" 
+                        Clicked="OnCancelClicked"/>
+                <Button Grid.Column="1" Text="Save" 
+                        Clicked="OnSaveClicked"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
